@@ -30,8 +30,9 @@ public class EvaluationService {
 	 * @return
 	 */
 	public String acronym(String phrase) {
+		return phrase;
 		// TODO Write an implementation for this method declaration
-		return null;
+	
 	}
 
 	/**
@@ -47,16 +48,27 @@ public class EvaluationService {
 		private double sideOne;
 		private double sideTwo;
 		private double sideThree;
+		
+		private int compare_12;
+		private int compare_23;
+		private int compare_31;
 
 		public Triangle() {
 			super();
 		}
 
 		public Triangle(double sideOne, double sideTwo, double sideThree) {
-			this();
+			//when a constructor is called, it either calls the super() constructor implicitly
+			//or it will call the this() explicitly and set all the fields 
+			this(); //referring to the constructor on line 56
 			this.sideOne = sideOne;
 			this.sideTwo = sideTwo;
 			this.sideThree = sideThree;
+//			
+//			this.compare_12 = Double.compare(sideOne, sideTwo);
+//			this.compare_23 = Double.compare(sideTwo, sideThree);
+//			this.compare_31 = Double.compare(sideThree, sideOne);
+			
 		}
 
 		public double getSideOne() {
